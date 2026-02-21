@@ -1,21 +1,22 @@
 require('dotenv').config();
 
 const request = require('supertest');
+const postLogin = require('../fixtures/postLogin.json');
 
-async function obterToken(username, senha) {
-  const resposta = await request(process.env.BASE_URL)
+const obterToken = async () => {
+  
+  const bodyLogin = { ...postLogin}
+
+  const respostaLogin = await request(process.env.BASE_URL)
     .post('/login')
     .set('Content-Type', 'application/json')
-    .send({
-      username,
-      senha
-    });
+    .send(bodyLogin);
 
-  if (!resposta.body.token) {
+  if (!respostaLogin.body.token) {
     throw new Error('Token não retornado no login');
   }
 
-  return resposta.body.token;
+  return respostaLogin.body.token;
 }
 
 module.exports = {
