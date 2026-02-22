@@ -3,7 +3,7 @@
 ## 📌 Visão Geral do Projeto
 
 **Banco API Tests** é um projeto de automação de testes para APIs REST,
-criado para validar os endpoints da aplicação `banco-api` https://github.com/juliodelimas/banco-api.
+criado para validar os endpoints da aplicação `banco-api` https://github.com/welitaluisa/banco-api.
 
 O projeto tem como foco validar fluxos de autenticação, regras de negócio e cenários de integração utilizando testes automatizados com JavaScript e bibliotecas modernas de testes.
 
